@@ -33,6 +33,7 @@ const RevenueLineChart = () => {
 
     const options={
         responsive:true,
+        maintainAspectRatio: false,
         plugins:{
             legend:{
                 labels:{
@@ -60,7 +61,7 @@ const RevenueLineChart = () => {
         }
     }
   return (
-    <div className={`rounded-xl p-5 shadow-sm ${dark?'bg-gray-800':'bg-white'}`}>
+    <div className={`rounded-xl p-5 shadow-sm h-full ${dark?'bg-gray-800':'bg-white'}`}>
         <Line data={revenueData} options={options}/>
     </div>
   )
